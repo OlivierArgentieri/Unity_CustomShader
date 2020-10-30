@@ -17,13 +17,7 @@
              "IgnoreProjector"="True"  
         }
         Blend SrcAlpha OneMinusSrcAlpha
-        //ZWrite on
         Cull off
-
-       
-        //Cull off
-
-      // ZWrite off
 
         
         Pass
