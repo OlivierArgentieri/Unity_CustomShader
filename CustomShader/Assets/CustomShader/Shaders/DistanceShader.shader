@@ -56,15 +56,7 @@
                 fixed4 col = tex2D(_MainTex, i.uv); // Texture Lookup
                 float newAlpha = distance(i.worldPos, _WorldSpaceCameraPos) / _Range;
 
-
-                // saturate = clamp01 ?
-                if(newAlpha > 1)
-                    newAlpha = 1;
-
-                if(newAlpha <0)
-                    newAlpha =0;
-
-                col.a  = newAlpha;
+                col.a  = saturate(newAlpha);
                 return col;
                 
             }
